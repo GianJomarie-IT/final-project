@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Connect</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+  <link rel="stylesheet" href="../css/land.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+      Campus<span>Connect</span>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="../../index.html"><button class="nav-btn">
+        Sign Out
+      </button></a>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-text">
+
+      <h1>
+        Connect Your
+        <span>Campus Community</span>
+      </h1>
+
+      <p>
+        A modern platform for communication,
+        collaboration, events, announcements,
+        and academic networking.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="primary-btn">
+          Get Started
+        </button>
+
+        <button class="secondary-btn">
+          Learn More
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+
+  <section class="features">
+
+    <div class="section-title">
+      <h2>Why Choose CampusConnect?</h2>
+
+      <p>
+        Everything students need in one platform.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+
+        <div class="icon">
+          <i class="fa-solid fa-user-graduate"></i>
+        </div>
+
+        <h3>Student Network</h3>
+
+        <p>
+          Connect with classmates and build communities.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <div class="icon">
+          <i class="fa-solid fa-calendar"></i>
+        </div>
+
+        <h3>Campus Events</h3>
+
+        <p>
+          Discover seminars, workshops, and activities.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <div class="icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+
+        <h3>Real-Time Chat</h3>
+
+        <p>
+          Instantly communicate with classmates.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <div class="icon">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+
+        <h3>Modern Experience</h3>
+
+        <p>
+          Sleek design with a smooth responsive interface.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 CampusConnect. All Rights Reserved.
+  </footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
