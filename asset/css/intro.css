@@ -24,7 +24,10 @@ h1 {
 }
 
 .rev-block {
-     position: absolute;
+  position: absolute;
+  left: 50%;                    
+  transform: translateX(-50%);  
+  white-space: nowrap;          
 }
 
 .rev-block span {
@@ -74,9 +77,12 @@ h1 {
 }
 
 #onemore {
-     top: 53%;
-     left: 47%;
+  top: 53%;
+  left: 50%;                   
+  transform: translateX(-50%);  
+  white-space: nowrap;          
 }
+
 
 #onemore span {
      animation-delay: 2s;
