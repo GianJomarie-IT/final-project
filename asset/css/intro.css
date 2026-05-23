@@ -18,7 +18,7 @@ h1 {
      text-transform: uppercase;
      padding: 0.4em 1em;
      position: absolute;
-     top: 40%;
+     top: 30%;
      left: 46%;
      transform: translate(-50%, -50%);
 }
@@ -77,7 +77,7 @@ h1 {
 }
 
 #onemore {
-  top: 53%;
+  top: 43%;
   left: 50%;                   
   transform: translateX(-50%);  
   white-space: nowrap;          
@@ -93,6 +93,23 @@ h1 {
      animation-delay: 1.4s;
 }
 
+#twomore {
+  top: 57%;
+  left: 50%;                   
+  transform: translateX(-50%);  
+  white-space: nowrap;          
+}
+
+#twomore span {
+     animation-delay: 2s;
+     font-size: 20px;
+}
+
+#twomore.rev-block:after {
+     background: pink;
+     animation-delay: 1.7s;
+}
+
 @media only screen and (max-width: 900px) {
      h1 {
           font-size: 20px;
@@ -100,7 +117,12 @@ h1 {
      }
 }
 
-h1 a {
-     text-decoration: none;
-     color: white;
+a {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    cursor: pointer;
 }

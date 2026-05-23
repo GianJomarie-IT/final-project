@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Features | CampusConnect</title>
+
+  <link rel="stylesheet" href="../css/ft.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+<link rel="icon" type="image/x-icon" href="../picture/logo.jpg">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+      Campus<span>Connect</span>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="./landing.html">Home</a>
+      <a href="./event.html">Events</a>
+      <a href="./ft.html">Features</a>
+      <a href="./connect.html">Connect</a>
+      <a href="./about.html">Team</a>
+      <a href="../../index.html"><button class="nav-btn">
+        Sign Out
+      </button></a>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        Programs &
+        <span>Services</span>
+      </h1>
+
+      <p>
+        Explore the official programs,
+        services, and initiatives offered
+        by CampusConnect to support
+        leadership, skills, and academic growth.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SEARCH -->
+
+  <section class="search-section">
+
+    <div class="search-box">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <input
+        type="text"
+        id="programSearch"
+        placeholder="Search programs..."
+        onkeyup="searchPrograms()"
+      >
+
+    </div>
+
+  </section>
+
+  <!-- PROGRAMS -->
+
+  <section class="programs-section">
+
+    <div class="section-title">
+
+      <h2>Official Programs & Services</h2>
+
+      <p>
+        Structured activities that help students
+        develop leadership, academic excellence,
+        and personal growth.
+      </p>
+
+    </div>
+
+    <div class="programs-grid" id="programsGrid">
+
+      <!-- CARD -->
+
+      <div class="program-card">
+
+        <div class="program-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+
+        <h3>Leadership Development</h3>
+
+        <p>
+          Leadership training programs
+          designed for student officers
+          and aspiring campus leaders.
+        </p>
+
+        <button
+          class="program-btn"
+          onclick="openProgramPopup('Leadership Development')"
+        >
+          Enroll Program
+        </button>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="program-card">
+
+        <div class="program-icon">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+
+        <h3>ICT Skills Seminar</h3>
+
+        <p>
+          Learn programming, web development,
+          and digital productivity skills.
+        </p>
+
+        <button
+          class="program-btn"
+          onclick="openProgramPopup('ICT Skills Seminar')"
+        >
+          Enroll Program
+        </button>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="program-card">
+
+        <div class="program-icon">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <h3>Academic Support Sessions</h3>
+
+        <p>
+          Academic tutoring and review
+          sessions to improve student learning.
+        </p>
+
+        <button
+          class="program-btn"
+          onclick="openProgramPopup('Academic Support Sessions')"
+        >
+          Enroll Program
+        </button>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="program-card">
+
+        <div class="program-icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+
+        <h3>Communication Workshops</h3>
+
+        <p>
+          Improve public speaking,
+          communication, and presentation skills.
+        </p>
+
+        <button
+          class="program-btn"
+          onclick="openProgramPopup('Communication Workshops')"
+        >
+          Enroll Program
+        </button>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="program-card">
+
+        <div class="program-icon">
+          <i class="fa-solid fa-handshake-angle"></i>
+        </div>
+
+        <h3>Campus Engagement</h3>
+
+        <p>
+          Activities and student programs
+          that strengthen campus participation.
+        </p>
+
+        <button
+          class="program-btn"
+          onclick="openProgramPopup('Campus Engagement')"
+        >
+          Enroll Program
+        </button>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="program-card">
+
+        <div class="program-icon">
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <h3>Student Empowerment</h3>
+
+        <p>
+          Programs focused on confidence,
+          teamwork, and student growth.
+        </p>
+
+        <button
+          class="program-btn"
+          onclick="openProgramPopup('Student Empowerment')"
+        >
+          Enroll Program
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- POPUP -->
+
+  <div class="popup-overlay" id="popupOverlay">
+
+    <div class="program-popup">
+
+      <div class="popup-header">
+
+        <h2>Program Enrollment</h2>
+
+        <button onclick="closeProgramPopup()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+      </div>
+
+      <p class="popup-program" id="popupProgramName">
+        Program Name
+      </p>
+
+      <form class="popup-form" id="popupForm">
+
+        <input
+          type="text"
+          placeholder="Full Name"
+          required
+        >
+
+        <input
+          type="text"
+          placeholder="Student ID"
+          required
+        >
+
+        <input
+          type="text"
+          placeholder="Course / Program"
+          required
+        >
+
+        <button type="submit">
+          Submit Enrollment
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- AI BUTTON -->
+
+  <button class="ai-btn" onclick="openAIChat()">
+    <i class="fa-solid fa-robot"></i>
+  </button>
+
+  <!-- AI CHAT -->
+
+  <div class="ai-overlay" id="aiOverlay">
+
+    <div class="ai-chat-container">
+
+      <div class="ai-chat-header">
+
+        <h3>Campus AI Assistant</h3>
+
+        <button onclick="closeAIChat()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+      </div>
+
+      <div class="ai-chat-messages" id="chatMessages">
+
+        <div class="ai-message">
+          Hello! Ask me anything 👋
+        </div>
+
+      </div>
+
+      <div class="ai-chat-input">
+
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Ask something..."
+        >
+
+        <button onclick="sendMessage()">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 CampusConnect. All Rights Reserved.
+  </footer>
+
+  <script>
+    const menuToggle =
+document.getElementById("menuToggle");
+
+const navLinks =
+document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+
+  navLinks.classList.toggle("active");
+
+});
+
+/* SEARCH PROGRAMS */
+
+function searchPrograms(){
+
+  const input =
+  document.getElementById("programSearch")
+  .value
+  .toLowerCase();
+
+  const cards =
+  document.querySelectorAll(".program-card");
+
+  cards.forEach(card => {
+
+    const text =
+    card.innerText.toLowerCase();
+
+    if(text.includes(input)){
+
+      card.style.display = "block";
+
+    }else{
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+}
+
+/* PROGRAM POPUP */
+
+const popupOverlay =
+document.getElementById("popupOverlay");
+
+const popupProgramName =
+document.getElementById("popupProgramName");
+
+function openProgramPopup(programName){
+
+  popupOverlay.style.display = "flex";
+
+  popupProgramName.textContent =
+  programName;
+
+}
+
+function closeProgramPopup(){
+
+  popupOverlay.style.display = "none";
+
+}
+
+popupOverlay.addEventListener("click", (e) => {
+
+  if(e.target === popupOverlay){
+
+    closeProgramPopup();
+
+  }
+
+});
+
+const popupForm =
+document.getElementById("popupForm");
+
+popupForm.addEventListener("submit", (e) => {
+
+  e.preventDefault();
+
+  alert("Successfully enrolled!");
+
+  popupForm.reset();
+
+  closeProgramPopup();
+
+});
+
+/* AI CHAT */
+
+const aiOverlay =
+document.getElementById("aiOverlay");
+
+const chatMessages =
+document.getElementById("chatMessages");
+
+function openAIChat(){
+
+  aiOverlay.style.display = "flex";
+
+}
+
+function closeAIChat(){
+
+  aiOverlay.style.display = "none";
+
+}
+
+async function sendMessage(){
+
+  const userInput =
+  document.getElementById("userInput");
+
+  const message =
+  userInput.value.trim();
+
+  if(!message) return;
+
+  /* USER MESSAGE */
+
+  const userMessage =
+  document.createElement("div");
+
+  userMessage.classList.add("user-message");
+
+  userMessage.textContent = message;
+
+  chatMessages.appendChild(userMessage);
+
+  userInput.value = "";
+
+  /* AI MESSAGE */
+
+  const aiMessage =
+  document.createElement("div");
+
+  aiMessage.classList.add("ai-message");
+
+  aiMessage.textContent = "Thinking...";
+
+  chatMessages.appendChild(aiMessage);
+
+  chatMessages.scrollTop =
+  chatMessages.scrollHeight;
+
+  try{
+
+    const response = await fetch(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AIzaSyCK8o9gNdDVoQoLxSfiRC7n97erOvryWq8",
+      {
+        method:"POST",
+
+        headers:{
+          "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify({
+          contents:[
+            {
+              parts:[
+                {
+                  text:message
+                }
+              ]
+            }
+          ]
+        })
+      }
+    );
+
+    const data =
+    await response.json();
+
+    const reply =
+    data.candidates[0].content.parts[0].text;
+
+    aiMessage.textContent = reply;
+
+  }catch(error){
+
+    aiMessage.textContent =
+    "Error connecting to Gemini API.";
+
+  }
+
+  chatMessages.scrollTop =
+  chatMessages.scrollHeight;
+
+}
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Connect | CampusConnect</title>
+
+  <link rel="stylesheet" href="../css/connect.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+<link rel="icon" type="image/x-icon" href="../picture/logo.jpg">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+      Campus<span>Connect</span>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="./landing.html">Home</a>
+      <a href="./event.html">Events</a>
+      <a href="./ft.html">Features</a>
+      <a href="./connect.html">Connect</a>
+      <a href="./about.html">Team</a>
+      <a href="../../index.html"><button class="nav-btn">
+        Sign Out
+      </button></a>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="connect-hero">
+
+    <div class="hero-content">
+
+      <h1>
+        Contact &
+        <span>Inquiries</span>
+      </h1>
+
+      <p>
+        Official communication channel of CampusConnect
+        where students can send inquiries, applications,
+        concerns, and connect with other students.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT GRID -->
+
+  <section class="contact-grid">
+
+    <!-- INQUIRY FORM -->
+
+    <div class="contact-card">
+
+      <div class="card-header">
+
+        <div class="card-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <h2>Online Inquiry Form</h2>
+
+      </div>
+
+      <form class="connect-form">
+
+        <div class="input-box">
+          <input type="text" placeholder="Full Name">
+        </div>
+
+        <div class="input-box">
+          <input type="email" placeholder="Email Address">
+        </div>
+
+        <div class="input-box">
+
+          <select>
+
+            <option>
+              Inquiry Category
+            </option>
+
+            <option>
+              Membership
+            </option>
+
+            <option>
+              Events
+            </option>
+
+            <option>
+              Technical Support
+            </option>
+
+            <option>
+              Student Concern
+            </option>
+
+          </select>
+
+        </div>
+
+        <div class="input-box">
+          <textarea placeholder="Write your message..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Send Inquiry
+        </button>
+
+      </form>
+
+    </div>
+
+    <!-- MEMBERSHIP -->
+
+    <div class="contact-card">
+
+      <div class="card-header">
+
+        <div class="card-icon">
+          <i class="fa-solid fa-id-card"></i>
+        </div>
+
+        <h2>Membership Application</h2>
+
+      </div>
+
+      <form class="connect-form">
+
+        <div class="input-box">
+          <input type="text" placeholder="Student Name">
+        </div>
+
+        <div class="input-box">
+          <input type="text" placeholder="Student ID">
+        </div>
+
+        <div class="input-box">
+          <input type="text" placeholder="Course / Program">
+        </div>
+
+        <div class="input-box">
+          <textarea placeholder="Why do you want to join?"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Apply Membership
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT INFO -->
+
+  <section class="info-section">
+
+    <div class="section-title">
+
+      <h2>Contact Information</h2>
+
+      <p>
+        Reach out to CampusConnect anytime.
+      </p>
+
+    </div>
+
+    <div class="info-grid">
+
+      <div class="info-card">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        <h3>Office Location</h3>
+
+        <p>
+          Emilio Aguinaldo College- Manila
+        </p>
+
+      </div>
+
+      <div class="info-card">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <h3>Phone Number</h3>
+
+        <p>
+          +63 945 676 6767
+        </p>
+
+      </div>
+
+      <div class="info-card">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <h3>Email Address</h3>
+
+        <p>
+          campusconnect@gmail.com
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- STUDENT MESSAGING -->
+
+<section class="student-section">
+
+  <div class="section-title">
+
+    <h2>Message Other Students</h2>
+
+    <p>
+      Connect and collaborate with fellow students.
+    </p>
+
+  </div>
+
+  <!-- SEARCH BAR -->
+
+  <div class="student-search">
+
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+    <input
+      type="text"
+      id="studentSearch"
+      placeholder="Search students..."
+      onkeyup="searchStudents()"
+    >
+
+  </div>
+
+  <!-- STUDENT LIST -->
+
+  <div class="students-container" id="studentsContainer">
+
+    <!-- STUDENT -->
+
+    <div class="student-chat-card">
+
+      <div class="student-user">
+
+        <img
+          src="https://scontent.fmnl17-6.fna.fbcdn.net/v/t39.30808-6/483487698_620292250630991_5121449141641209617_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHatieSnjInSEX138fDT1p-1FlIvjYKAGnUWUi-NgoAaQ79BsrGoQIjw2did4kO4mdoQPkyZXghDkTQMxlbIZOu&_nc_ohc=ywhKRp1va7YQ7kNvwF6a2fu&_nc_oc=AdpKKi30dyJ0Q429pDDQslftpxX8SD-ubHH5ITEB8EnEj1nQEHLcmcBb89ewBcg20tI&_nc_zt=23&_nc_ht=scontent.fmnl17-6.fna&_nc_gid=ZK1_1cXHtLiEoA1llQ4EFg&_nc_ss=7b2a8&oh=00_Af4X_QjmxYhC9BIY06lavC79uEIWDo63ZRTbGc8KZBVDsA&oe=6A177881"
+          alt="student"
+        >
+
+        <div>
+          <h3>Cedrick Manangan</h3>
+          <span>BSIT Student</span>
+        </div>
+
+      </div>
+
+      <button class="message-btn">
+        Message
+      </button>
+
+    </div>
+
+    <!-- STUDENT -->
+
+    <div class="student-chat-card">
+
+      <div class="student-user">
+
+        <img
+          src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/659444749_2137201817076970_4097479474028304972_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFS30MZGoH6QOV-yohLiGEzgYpReradMXaBilF6tp0xdgAkwS7JqSqbdiKnzKBuO0R6-xsxoumsij5iz6wc5ql3&_nc_ohc=UYNrjgAcXpUQ7kNvwHdyZP_&_nc_oc=AdpVW93QmxCQvpOuU0vAKkPowX5WnHyjBo8Z7stEwq4Ud2DJN0WmsuF66bx10bWdoJ4&_nc_zt=23&_nc_ht=scontent.fmnl17-3.fna&_nc_gid=m90nNYF0AggoUL7atmoQQQ&_nc_ss=7b2a8&oh=00_Af7HyeNVSIl9iqBWXYoUUUQG68EewchRv6ZhWyMJAw8N-g&oe=6A177569"
+          alt="student"
+        >
+
+        <div>
+          <h3>Marrius Jon Laureta</h3>
+          <span>BSIT Student</span>
+        </div>
+
+      </div>
+
+      <button class="message-btn">
+        Message
+      </button>
+
+    </div>
+
+    <!-- STUDENT -->
+
+    <div class="student-chat-card">
+
+      <div class="student-user">
+
+        <img
+          src="https://scontent.fmnl17-8.fna.fbcdn.net/v/t39.30808-6/701009749_1516508919863100_2824792266114663830_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF-JffGNVrhiCSP2n0ODnKsnTLrgGA5hYmdMuuAYDmFifJQcFVQ0BYcdkk7cZm2vpRbF7crdZ6_xzAwwOCBBTMj&_nc_ohc=0cNwa2ZnYqEQ7kNvwHFs7Mi&_nc_oc=Ado5mcdYeUv28C7djnXdd-98oM-iIczryGFSklOdwXSJDeqIE3ZQqPExWr4HGdX8WnI&_nc_zt=23&_nc_ht=scontent.fmnl17-8.fna&_nc_gid=t4Xxj6XVkGkee49P63OAnA&_nc_ss=7b2a8&oh=00_Af6ZUAqFTe888tdS4eXOAxQ6npYXRjNIRBckE1cvkg3HSg&oe=6A177E4D"
+          alt="student"
+        >
+
+        <div>
+          <h3>Clark Raiden Cruz</h3>
+          <span>BSIT Student</span>
+        </div>
+
+      </div>
+
+      <button class="message-btn">
+        Message
+      </button>
+
+    </div>
+
+    <!-- STUDENT -->
+
+    <div class="student-chat-card">
+
+      <div class="student-user">
+
+        <img
+          src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/542666912_755834504015778_2265763863401555838_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFo73_srSR5jJIMxWgcc59vbXVr6JLDUJxtdWvoksNQnHSF5pCNcItzxRuTDsw_4gNE8eGlnuNTK9uO62EPs24B&_nc_ohc=EcsXpyXSUQUQ7kNvwG97PML&_nc_oc=AdqOzn2FefOQ_5IJSrgxK4_N-UOZjqHcvrWW5wL6CTJnpC3fJUAeIWeqoGtvbUXO9zs&_nc_zt=23&_nc_ht=scontent.fmnl17-3.fna&_nc_gid=CkoPdnxMMWeUkk2mqfnp-g&_nc_ss=7b2a8&oh=00_Af6PZUnu-6sbRv-Fon9xZ8d9lRvC3M90xIc_F3bMEG52Fw&oe=6A175E8B"
+          alt="student"
+        >
+
+        <div>
+          <h3>Aeron Royet Peñano</h3>
+          <span>BSIT Student</span>
+        </div>
+
+      </div>
+
+      <button class="message-btn">
+        Message
+      </button>
+
+    </div>
+
+    <!-- STUDENT -->
+
+    <div class="student-chat-card">
+
+      <div class="student-user">
+
+        <img
+          src="../picture/a.jpg"
+          alt="student"
+        >
+
+        <div>
+          <h3>Robert John Equipilag</h3>
+          <span>BSIT Student</span>
+        </div>
+
+      </div>
+
+      <button class="message-btn">
+        Message
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- FLOATING AI BUTTON -->
+
+  <button class="ai-btn" onclick="openAIChat()">
+    <i class="fa-solid fa-robot"></i>
+  </button>
+
+  <!-- AI OVERLAY -->
+
+  <div class="ai-overlay" id="aiOverlay">
+
+    <div class="ai-chat-container">
+
+      <div class="ai-chat-header">
+
+        <h3>Campus AI Assistant</h3>
+
+        <button onclick="closeAIChat()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+      </div>
+
+      <div class="ai-chat-messages" id="chatMessages">
+
+        <div class="ai-message">
+          Hello! Ask me anything 👋
+        </div>
+
+      </div>
+
+      <div class="ai-chat-input">
+
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Ask something..."
+        >
+
+        <button onclick="sendMessage()">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 CampusConnect. All Rights Reserved.
+  </footer>
+
+  <script>
+    const menuToggle =
+  document.getElementById("menuToggle");
+
+const navLinks =
+  document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+
+  navLinks.classList.toggle("active");
+
+});
+
+/* AI CHAT */
+
+const aiOverlay =
+  document.getElementById("aiOverlay");
+
+const chatMessages =
+  document.getElementById("chatMessages");
+
+function openAIChat(){
+
+  aiOverlay.style.display = "flex";
+
+}
+
+function closeAIChat(){
+
+  aiOverlay.style.display = "none";
+
+}
+
+async function sendMessage(){
+
+  const userInput =
+    document.getElementById("userInput");
+
+  const message =
+    userInput.value.trim();
+
+  if(!message) return;
+
+  /* USER MESSAGE */
+
+  const userMessage =
+    document.createElement("div");
+
+  userMessage.classList.add("user-message");
+
+  userMessage.textContent = message;
+
+  chatMessages.appendChild(userMessage);
+
+  userInput.value = "";
+
+  /* AI MESSAGE */
+
+  const aiMessage =
+    document.createElement("div");
+
+  aiMessage.classList.add("ai-message");
+
+  aiMessage.textContent = "Thinking...";
+
+  chatMessages.appendChild(aiMessage);
+
+  chatMessages.scrollTop =
+    chatMessages.scrollHeight;
+
+  try{
+
+    const response = await fetch(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AIzaSyCK8o9gNdDVoQoLxSfiRC7n97erOvryWq8",
+      {
+        method:"POST",
+
+        headers:{
+          "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify({
+          contents:[
+            {
+              parts:[
+                {
+                  text:message
+                }
+              ]
+            }
+          ]
+        })
+      }
+    );
+
+    const data = await response.json();
+
+    const reply =
+      data.candidates[0].content.parts[0].text;
+
+    aiMessage.textContent = reply;
+
+  }catch(error){
+
+    aiMessage.textContent =
+      "Error connecting to Gemini API.";
+
+    console.error(error);
+
+  }
+
+  chatMessages.scrollTop =
+    chatMessages.scrollHeight;
+
+}
+
+/* STUDENT SEARCH */
+
+function searchStudents(){
+
+  const input =
+    document.getElementById("studentSearch")
+    .value
+    .toLowerCase();
+
+  const students =
+    document.querySelectorAll(".student-chat-card");
+
+  students.forEach(student => {
+
+    const text =
+      student.innerText.toLowerCase();
+
+    if(text.includes(input)){
+
+      student.style.display = "flex";
+
+    }else{
+
+      student.style.display = "none";
+
+    }
+
+  });
+
+}
+  </script>
+
+</body>
+</html>
